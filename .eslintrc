@@ -1,0 +1,40 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "sourceType": "module"
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint/eslint-plugin", "import"],
+  "extends": "airbnb-base",
+  "rules": {
+    "@typescript-eslint/no-unused-vars": ["error", { "args": "none" }],
+    "no-useless-constructor": "off",
+    "no-empty-function": "off",
+    "max-len": "off",
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "import/prefer-default-export": "off",
+    "no-extraneous-dependencies": "off",
+    "indent": "off",
+    "object-curly-newline": "off",
+    "class-methods-use-this": "off",
+    "max-classes-per-file": ["error", 10],
+    "object-shorthand": "off",
+    "no-underscore-dangle": "off",
+    "dot-notation": "off",
+    "no-tabs": "off",
+    "no-shadow": "off",
+    "no-restricted-syntax": "off",
+    "no-param-reassign": "off"
+  },
+  "ignorePatterns": [".eslintrc.js"],
+  "globals": {
+    "Express": "readonly",
+    "NodeJS": "readonly"
+  }
+}

@@ -1,0 +1,13 @@
+FROM node:14.18.0
+
+WORKDIR /usr/src/flight
+
+COPY package*.json ./
+
+RUN npm install
+COPY . .
+
+RUN npm run build
+
+EXPOSE 8080:3040
+CMD [ "node", "dist/main" ]
